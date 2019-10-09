@@ -1,0 +1,19 @@
+Procedure 9/28 
+1. Create View, Model, ViewModel folders
+2. Delete MainPage
+3. Add new item (Basic Page) MainPage.xaml to View Folder
+4. Change App.xaml.cs to point to new MainPage.xaml
+			rootFrame.Navigate(typeof(View.MainPage), e.Arguments);
+5. Add Square and PuzzleModel classes to Model folder
+6. Add PuzzleManager class to ViewModel
+7. Add PuzzleManager using statements for View and Model
+8. Change MainPage.xaml
+    xmlns:view="using:xxx.View"
+    xmlns:viewmodel="using:xxx.ViewModel"
+9. Change MainPage.xaml codebehind
+		using xxx.ViewModel;
+	Outside of constructor, add 
+		PuzzleManager pm;
+	Inside of constructor after InitializeComponenet add
+		pm = new PuzzleManager();
+10. Carry on
